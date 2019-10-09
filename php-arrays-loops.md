@@ -141,9 +141,9 @@ Associative array elements aren’t numbered, instead they are labelled. The lab
 
 | Key   |       value       |       
 |:--:|:-------------:|
-|"name"|"The Rolling Stones"|
-|"formed"|"1962"|
-|"location"|"London"|
+|"title"|"Jaws"|
+|"year"|"1975"|
+|"duration"|"124"|
 
 To create an associative array:
 
@@ -155,16 +155,16 @@ $nameOfArray=["key"=>"value", "key"=>"value", "key"=>"value"];
 Here's a specific example:
 ```php
 <?php
-$band=["name"=>"The Rolling Stones", "formed"=>1962, "location"=>"London"];
+$film=["title"=>"Jaws", "year"=>"1975", "duration"=>124];
 ?>
 ```
 
 We access elements using the key instead of an index number
 ```php
 <?php
-$band=["name"=>"The Rolling Stones", "formed"=>1962, "location"=>"London"];
-echo "<p>{$band['location']}</p>"; // outputs London
-$band["genre"]="Rock"; // adds another element
+$film=["title"=>"Jaws", "year"=>"1975", "duration"=>124];
+echo "<p>The film {$film['title']} was released in {$film['year']}</p>"; // outputs The film Jaws was released in 1975
+$film["certificate"]="15"; // adds a new certificate element
 ?>
 ```
 
